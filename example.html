@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <!-- PlayAlong.js -->
+    <script src="js/playalong.js"></script>
+    <!-- -->
+
+    <style type="text/css">
+      #globe {
+        position: absolute;
+        top: 18%;
+        left: 70%;
+        width: 18%;
+        height: 20%;
+        border-radius: 100%;
+        border: 2px solid magenta;
+        box-shadow: 0 0 2px rgba(0,0,0,.8);
+      }
+      #globe a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+        background: rgba(255,255,255,.2);
+        box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+      }
+      #globe a:hover {
+        background: rgba(255,127,255,.2);
+      }
+    </style>
+
+    <title>PlayAlong Example</title>
+
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>Hello PlayAlong!</h1>
+
+      <div class="row">
+
+        <div class="col-md-8 col-lg-6 text-center">
+
+          <video id="my-video" controls class="img-fluid ">
+            <source src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Le_Voyage_dans_la_Lune_%28Georges_M%C3%A9li%C3%A8s%2C_1902%29.ogv" type="video/ogg">
+          </video>
+
+          <button class="btn btn-success" video-play>Play or Pause</button>
+
+        </div>
+
+        <div class="col-md-4 col-lg-6">
+
+          <div class="alert alert-dark" video-id="my-video" video-end="00:07">
+            <h3>This text is visible from the start until 00:07</h3>
+          </div>
+
+          <div class="alert alert-warning m-2" role="alert" video-overlay video-start="00:03" video-end="00:10">
+            This overlay is visible from 00:03 to 00:10
+          </div>
+
+          <div class="alert alert-primary m-2" role="alert" video-overlay>
+            This overlay is always visible
+          </div>
+
+          <div video-overlay id="globe" video-start="00:08" video-end="02:32">
+            <a href="https://en.wikipedia.org/wiki/Armillary_sphere" target="_blank"></a>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
