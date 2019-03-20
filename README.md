@@ -32,6 +32,12 @@ Use **video-start** and **video-end** to make HTML elements appear and/or disapp
 </div>
 ```
 
+Use **video-play** to create a Play button
+
+```HTML
+<button video-id="my-video" video-play>Play or Pause</button>
+```
+
 ### Compatibility
 
 Tested with Firefox 65, Chrome 72.
